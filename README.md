@@ -1,20 +1,15 @@
-# designnotes
+# 酷课堂导航
 
-This template should help get you started developing with Vue 3 in Vite.
+酷课堂导航是一个免费、基于Vue+TS开发的网址导航，引入了Bootstrap-vue-next、TailwindCSS，界面优雅简洁，自适应客户端，直接修改构建后发布项目即可。
 
-## Recommended IDE Setup
+## 预览
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![image](./public/images/1.png)
+![image](./public/images/2.png)
+![image](./public/images/3.png)
+![image](./public/images/m1.png)
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## 项目安装与运行
 
 ```sh
 npm install
