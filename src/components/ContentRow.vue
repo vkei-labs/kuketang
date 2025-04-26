@@ -112,7 +112,7 @@
               <div class="card-title flex-nowrap border-0">
                 <div class="d-flex align-items-center overflow-hidden w-100">
                   <a :href="site.Url" target="_blank" rel="nofollow" class="icon-img dn-iciMg">
-                    <img class="mr-3 lazy lazy-loaded" :src="site.Logo">
+                    <img class="mr-3 lazy lazy-loaded" :src="site.Logo" onerror="this.src = /images/favicon-null.png">
                   </a>
                   <div class="card-title-content">
                     <div class="card-title-box">
@@ -186,27 +186,36 @@ const channels: Ref<Channel[]> = ref([
   { Id: 5, Name: '教育软件', Sort: 5, IsActive: false },
 ]);
 const sites: Ref<Site[]> = ref([
-  new Site(17, '21世纪教育网', 'https://www.21cnjy.com/favicon.ico', '旨在为用户提供强大的人工智能对话功能', 'https://www.21cnjy.com', 4, '/images/cover-null.png', '课件，教案，学案备课资源', 1),
-  new Site(14, '出卷网', 'https://www.chujuan.cn/favicon.ico', '海量中小学题库，线上题库组卷网站', 'https://www.chujuan.cn/', 4, '/images/cover-null.png', '出卷、组卷网', 2),
-
-  new Site(15, '在线组卷网', 'https://www.zujuan.com/favicon.ico', '老牌中小学题库组卷网站', 'https://www.zujuan.com/', 5, '/images/cover-null.png', '中小学组卷网站', 3),
-  new Site(26, '二一阅卷系统', 'https://www.21cnjy.com/favicon.ico', '阅卷系统，教务软件', 'https://yj.21cnjy.com', 5, '/images/cover-null.png', '教务软件阅卷系统', 2),
-  new Site(16, '二一排课系统', 'https://www.21cnjy.com/favicon.ico', '智能排课软件，教务软件', 'https://paike.21cnjy.com', 5, '/images/cover-null.png', '教务排课软件', 2),
-
   new Site(1, '国家教育部', 'https://www.moe.gov.cn/favorite.ico', '中华人民共和国教育部官网', 'http://www.moe.gov.cn/', 1, '/images/cover-null.png', '官方网站', 1),
   new Site(2, '中国教育电视台', 'https://www.moe.gov.cn/favorite.ico', '中国教育电视台', 'http://www.cetv.cn/', 1, '/images/cover-null.png', '官方网站', 1),
   new Site(3, '国家开放大学', 'https://www.ouchn.edu.cn/favicon.ico', '国家开放大学', 'https://www.ouchn.edu.cn/', 1, '/images/cover-null.png', '官方网站', 1),
+  new Site(14, '国家智慧教育公共服务平台', 'https://www.smartedu.cn/favicon.ico', '国家智慧教育公共服务平台', 'https://www.smartedu.cn/', 1, '/images/cover-null.png', '官方网站', 1),
+
+  new Site(4, '国家中小学智慧教育平台', 'https://basic.smartedu.cn/favicon.ico', '国家中小学智慧教育平台', 'https://basic.smartedu.cn/', 1, '/images/cover-null.png', '官方网站', 1),
+
+  new Site(5, '深圳中学', 'https://www.shenzhong.net/favicon.ico', '深圳中学', 'https://www.shenzhong.net/', 3, '/images/cover-null.png', '官方网站', 1),
+  new Site(6, '深圳外国语学校', 'https://www.sfls.net.cn/favicon.ico', '深圳外国语学校', 'https://www.sfls.net.cn/', 3, '/images/cover-null.png', '官方网站', 1),
+  new Site(7, '深圳实验中学', 'https://www.szsygzy.cn/favicon.ico', '深圳实验中学', 'https://www.szsygzy.cn/', 3, '/images/cover-null.png', '官方网站', 1),
+
+  new Site(17, '21世纪教育网', 'https://www.21cnjy.com/favicon.ico', '旨在为用户提供强大的人工智能对话功能', 'https://www.21cnjy.com', 4, '/images/cover-null.png', '课件，教案，学案备课资源', 1),
+  new Site(14, '出卷网', 'https://www.chujuan.cn/favicon.ico', '海量中小学题库，线上题库组卷网站', 'https://www.chujuan.cn/', 4, '/images/cover-null.png', '出卷、组卷网', 2),
+
+  new Site(15, '二一组卷网', 'https://www.21cnjy.com/favicon.ico', '老牌中小学题库组卷网站', 'https://www.21zujuan.com/', 5, '/images/cover-null.png', '中小学组卷网站', 3),
+  new Site(26, '二一阅卷系统', 'https://www.21cnjy.com/favicon.ico', '阅卷系统，教务软件', 'https://yj.21cnjy.com', 5, '/images/cover-null.png', '教务软件阅卷系统', 2),
+  new Site(16, '二一排课系统', 'https://www.21cnjy.com/favicon.ico', '智能排课软件，教务软件', 'https://paike.21cnjy.com', 5, '/images/cover-null.png', '教务排课软件', 2),
+
 
   new Site(5, '北京大学', 'https://www.pku.edu.cn/favicon.ico', '北京大学，教育部直属，全国知名大学，985,211', 'https://www.pku.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
   new Site(6, '清华大学', 'https://www.tsinghua.edu.cn/favicon.ico', '清华大学，教育部直属，全国知名大学，985,211', 'https://www.tsinghua.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
   new Site(7, '中国人民大学', 'https://www.ruc.edu.cn/favicon.ico', '中国人民大学，教育部直属，全国知名大学，985,211', 'https://www.ruc.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
   new Site(8, '北京师范大学', 'https://www.bnu.edu.cn/images/favicon.ico', '北京师范大学，教育部直属，全国知名大学，北京', 'https://www.bnu.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
   new Site(9, '中国政法大学', 'https://www.cupl.edu.cn/image/favicon.ico', '中国政法大学，教育部直属，全国知名大学，北京', 'https://www.cupl.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
+  new Site(9, '电子科技大学', 'https://www.uestc.edu.cn/favicon.ico', '电子科技大学，全国知名大学，成都', 'https://www.uestc.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2),
   new Site(10, '北京交通大学', 'https://www.bjtu.edu.cn/images/img2019/favicon.ico', '北京交通大学，教育部直属，全国知名大学，北京', 'https://www.bjtu.edu.cn/', 2, '/images/cover-null.png', '知名高校', 2)
 ]);
 const ranks: Ref<RankSubject[]> = ref([
-  new RankSubject(1, "AI榜", sites.value.filter(site => site.ChannelId == 1)),
-  new RankSubject(2, "工具榜", sites.value.filter(site => site.ChannelId == 7)),
+  new RankSubject(1, "官网榜", sites.value.filter(site => site.ChannelId == 1)),
+  new RankSubject(2, "高校榜", sites.value.filter(site => site.ChannelId == 2)),
 ]);
 
 const filteredSites = ref<Site[]>(sites.value);
