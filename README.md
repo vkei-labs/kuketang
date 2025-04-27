@@ -6,12 +6,14 @@
 酷课堂导航是一个免费、基于Vue+TS开发的网址导航纯前端项目，界面优雅简洁，自适应客户端，直接修改构建后发布项目即可。
 </p>
 
+演示网址：https://kuketang.cn/
+
 ## 技术特点
 
 - 基于Vue+TS开发
 - 引入了Bootstrap-vue-next、TailwindCSS
 
-## 预览
+## 界面预览
 
 ![image](./public/images/1.png)
 ![image](./public/images/2.png)
