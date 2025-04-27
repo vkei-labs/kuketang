@@ -1,8 +1,10 @@
-# 酷课堂导航
 
-酷课堂导航是一个免费、基于Vue+TS开发的网址导航，界面优雅简洁，自适应客户端，直接修改构建后发布项目即可。
-
-- 如果觉得这个项目对你有帮助，请给个Star吧。
+<p align="center">
+<img alt="logo" src="./src/assets/images/site-logo.png" height="70" />
+</p>
+<p align="center">
+酷课堂导航是一个免费、基于Vue+TS开发的网址导航纯前端项目，界面优雅简洁，自适应客户端，直接修改构建后发布项目即可。
+</p>
 
 ## 技术特点
 
@@ -18,27 +20,24 @@
 
 ## 项目安装与运行
 
+### 安装相关依赖
+
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 编译开发调试
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 构建项目前端代码
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## 💬 项目交流
 
-```sh
-npm run lint
-```
-
-## 💬 交流
 加微信：59466966（注明本项目名）
