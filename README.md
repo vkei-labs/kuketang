@@ -3,10 +3,11 @@
 <img alt="logo" src="./src/assets/images/site-logo.png" height="70" />
 </p>
 <p align="center">
-酷课堂导航是一个免费、基于Vue+TS开发的网址导航纯前端项目，界面优雅简洁，自适应客户端，直接修改构建后发布项目即可。
+	酷课堂导航是一个免费、基于Vue+TS开发的网址导航纯前端项目，界面优雅简洁，自适应客户端，
+	<br />直接修改构建后发布项目即可。
 </p>
 
-演示网址：https://kuketang.cn/
+演示网址：https://site.kuketang.cn/
 
 ## 技术特点
 
