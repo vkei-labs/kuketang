@@ -2,24 +2,26 @@ export class Site {
     Id: number;
     Name: string;
     Logo: string;
-    Description: string;
+    Desc: string;
     Url: string;
     ChannelId: number;
-    Background: string;
+    Cover: string;
     Sort: number;
-    Brief: string;
+    Hits: number;
+    Recommend:number;
 
     constructor(
-        id: number, name: string, logo: string, description: string, url: string, 
-        channelId: number, background: string, brief: string, sort: number) {
+        id: number, name: string, logo: string, desc: string, url: string,
+        channelId: number, cover: string, sort: number, hits:number,recommend:number) {
         this.Id = id;
         this.Name = name;
         this.Logo = logo;
-        this.Description = description;
+        this.Desc = desc;
         this.Url = url;
         this.ChannelId = channelId;
-        this.Background = background;
-        this.Brief = brief;
+        this.Cover = cover;
         this.Sort = sort;
+        this.Hits = hits;
+        this.Recommend = recommend;
     }
 }
