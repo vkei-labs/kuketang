@@ -16,10 +16,10 @@
 
 ## 界面预览
 
-![image](./public/images/1.png)
-![image](./public/images/2.png)
-![image](./public/images/3.png)
-![image](./public/images/m1.png)
+![image](./docs/images/1.png)
+![image](./docs/images/2.png)
+![image](./docs/images/3.png)
+![image](./docs/images/m1.png)
 
 ## 项目安装与运行
 
