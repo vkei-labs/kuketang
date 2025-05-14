@@ -1,9 +1,9 @@
 [
   { "Id": 0, "Name": "精选", "Sort": 0, "IsActive": true },
-  { "Id": 1, "Name": "国家级网站", "Sort": 1, "IsActive": false },
-  { "Id": 2, "Name": "省级考试院", "Sort": 1, "IsActive": false },
+  { "Id": 1, "Name": "教育部委", "Sort": 1, "IsActive": false },
+  { "Id": 2, "Name": "教育考试院", "Sort": 1, "IsActive": false },
   { "Id": 3, "Name": "知名高校", "Sort": 2, "IsActive": false },
-  { "Id": 4, "Name": "中小学",  "Sort": 3, "IsActive": false },
-  { "Id": 5, "Name": "备课资源", "Sort": 4, "IsActive": false },
-  { "Id": 6, "Name": "教育软件", "Sort": 5, "IsActive": false }
+  { "Id": 4, "Name": "中小学校",  "Sort": 3, "IsActive": false },
+  { "Id": 5, "Name": "教育品牌", "Sort": 4, "IsActive": false },
+  { "Id": 6, "Name": "备课资源", "Sort": 5, "IsActive": false }
 ]
