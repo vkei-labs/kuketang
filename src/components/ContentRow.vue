@@ -114,12 +114,12 @@
         <div class="card-list-group p-4" v-for="rank in ranks" v-bind:key="rank.Id">
           <h5 class="list-title">{{ rank.Title }}</h5>
           <div class="child-item" v-for="(site, index) in rank.Sites" v-bind:key="site.Id">
-            <a :href="site.Url" target="_blank" class="px-0 fade-in card-list collection" rel="nofollow"
+            <a :href="site.Url" class="px-0 fade-in card-list collection" rel="nofollow"
               :navigation="rank.Title">
               <div class="card-list-box">
                 <div class="card-list-num"><i class="num">{{ index + 1 }}</i></div>
                 <div class="icon-img w-img">
-                  <img class="mr-3 lazy lazy-loaded" :src="site.Logo" :alt="site.Name">
+                  <img class="mr-3 lazy lazy-loaded" :src="site.Logo || site.Url+'/favicon.ico'" onerror="this.src = '/images/favicon-null.png'" :alt="site.Name">
                 </div>
                 <div class="card-list-box  card-list-title">
                   <div class="card-list-hidden">
@@ -160,8 +160,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+
 
 import { ref, type Ref, onMounted, computed } from 'vue';
 import type { Channel } from '@/models/Channel';
@@ -185,11 +184,11 @@ const selectedSite = ref<Site | null>(null);
 // 异步加载本地 JSON 文件
 async function loadData() {
   // 加载频道
-  const channelsRes = await fetch('/src/assets/json/channels.json');
+  const channelsRes = await fetch('/json/channels.json');
   channels.value = await channelsRes.json();
 
   // 加载站点
-  const sitesRes = await fetch('/src/assets/json/sites.json');
+  const sitesRes = await fetch('/json/sites.json');
   const sitesData = await sitesRes.json();
   // 如果 Site 是类，需要转换
   sites.value = sitesData.map((item: Site) => new Site(
