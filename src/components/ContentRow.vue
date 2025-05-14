@@ -184,11 +184,11 @@ const selectedSite = ref<Site | null>(null);
 // 异步加载本地 JSON 文件
 async function loadData() {
   // 加载频道
-  const channelsRes = await fetch('/json/channels.json');
+  const channelsRes = await fetch('/json/channels.json?t=' + Date.now());
   channels.value = await channelsRes.json();
 
   // 加载站点
-  const sitesRes = await fetch('/json/sites.json');
+  const sitesRes = await fetch('/json/sites.json?t=' + Date.now());
   const sitesData = await sitesRes.json();
   // 如果 Site 是类，需要转换
   sites.value = sitesData.map((item: Site) => new Site(
@@ -199,7 +199,7 @@ async function loadData() {
 
 const ranks = computed(() => [
   new RankSubject(1, "官网榜", sites.value.filter(site => site.ChannelId == 1&& site.Hits > 40)),
-  new RankSubject(2, "高校榜", sites.value.filter(site => site.ChannelId == 2&& site.Hits > 40)),
+  new RankSubject(2, "高校榜", sites.value.filter(site => site.ChannelId == 3&& site.Hits > 40)),
 ]);
 
 const filteredSites = ref<Site[]>(sites.value);
